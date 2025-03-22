@@ -38,14 +38,15 @@ from module_constants import *
 game_menus = [
   ("start_game_0",menu_text_color(0xFF000000)|mnf_disable_all_keys,
     "Testing menu for Project KanColle. ",
-    "none",
+    "Everything is super damned alpha, whoa.",
+    "This will surely be in large need of time to actualize it.",
     [],
     [
-     ("continue",[],"Continue...",
+     ("continue",[],"I acknowledged. ",
        [(jump_to_menu, "mnu_start_game_1"),
         ]
        ),
-      ("go_back",[],"Go back",
+      ("go_back",[],"I quit, I QUIT!!!",
        [
          (change_screen_quit),
        ]),
