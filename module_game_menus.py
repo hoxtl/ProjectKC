@@ -37,9 +37,10 @@ from module_constants import *
 
 game_menus = [
   ("start_game_0",menu_text_color(0xFF000000)|mnf_disable_all_keys,
-    "Testing menu for Project KanColle. ",
-    "Everything is super damned alpha, whoa.",
-    "This will surely be in large need of time to actualize it.",
+    "Testing menu for Project KanColle.\
+    Everything is super damned alpha, whoa.\
+    This will surely be in large need of time to actualize it.",
+   "none",
     [],
     [
      ("continue",[],"I acknowledged. ",
@@ -47,10 +48,25 @@ game_menus = [
         ]
        ),
       ("go_back",[],"I quit, I QUIT!!!",
-       [
-         (change_screen_quit),
+       [(change_screen_quit),
        ]),
+       ("go_credit",[],"See credits",
+           [(jump_to_menu, "mnu_dummy_page"),
+            ]
+       ),
     ]
+  ),
+
+  ("dummy_page",mnf_disable_all_keys,
+    "This page is in kindly reservation for those brain cells sacrifieced their life during development.",
+   "none",
+   [],
+   [
+       ("respect",[],"Press f to respect.",
+        [(jump_to_menu, "mnu_start_game_0"),
+         ]
+        ),
+   ]
   ),
 
   ("start_phase_2",mnf_disable_all_keys,
